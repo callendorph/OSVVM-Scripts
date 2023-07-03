@@ -1,0 +1,52 @@
+
+<style>
+.build-status {
+   color:#D09000;
+}
+.build-status.PASSED {
+   color:#00C000 !important;
+}
+.build-status.FAILED {
+   color:#FF0000 !important;
+}
+
+</style>
+
+<table>
+  <tr style="height:40px">
+    <th>Build</th>
+    <th>[var ReportBuildName]</th>
+  <tr>
+  <tr class="build-status [var BuildStatus]">
+    <td>Status</td>
+    <td>[var BuildStatus]</td>
+  </tr>
+  <tr class="tests-passed">
+    <td>PASSED</td>
+    <td>[var TestCasesPassed]</td>
+  </tr>
+  <tr class="tests-failed">
+    <td>FAILED</td>
+    <td>[var TestCasesFailed]</td>
+  </tr>
+  <tr class="tests-skipped">
+    <td>SKIPPED</td>
+    <td>[var TestCasesSkipped]</td>
+  </tr>
+  <tr class="analyze-errors">
+    <td>Analyze Failures</td>
+    <td>[var ReportAnalyzeErrorCount]</td>
+  </tr>
+  <tr class="simulate-errors">
+    <td>Simulate Failures</td>
+    <td>[var ReportSimulateErrorCount]</td>
+  </tr>
+  <tr>
+    <td>Elapsed Time (h:m:s)</td>
+    <td>[var ElapsedTimeHms]</td>
+  </tr>
+  <tr>
+    <td>Elapsed Time (seconds)</td>
+    <td>[var ElapsedTimeSeconds]</td>
+  </tr>
+</table>

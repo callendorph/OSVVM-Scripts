@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    [include_from "header_report.tcss"]
+  </style>
+
+  <title> [var ReportBuildName] Build Report </title>
+
+</head>
+
+<body>
+
+  <br>
+
+  <h2> [var ReportBuildName] Build Summary Report </h2>
+
+  <div style="font-size:5px">
+    <br>
+  </div>
+
+  [include_from "build_report.thtml"]
+
+  ... More Content Here ...
+
+<br><br>
+</body>
+</html>
