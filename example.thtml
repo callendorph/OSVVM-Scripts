@@ -1,0 +1,37 @@
+<html>
+
+  [include_from "header.thtml"]
+
+  <body>
+    <p> The answer is: [var answer] </p>
+    <H1> List Example </H1>
+    [startloop {a} {1 2 3}]
+      <p> Loop # [var a] </p>
+    [emptyloop]
+      <p> Unexpected Empty List </p>
+      [endloop]
+
+    <H1> Empty List Example </H1>
+    [startloop {a} {}]
+      <p> Unexpected Loop # [var a] </p>
+    [emptyloop]
+      <p> Empty List Content </p>
+    [endloop]
+
+    <H1> Dict For Example </H1>
+
+    [startloop {k v} [var testdict]]
+      <p> Loop # [var k] [var v] </p>
+    [emptyloop]
+      <p> Unexpect empty Dict </p>
+    [endloop]
+
+    <H1> Empty Dict Example </H1>
+    [startloop {k v} [dict create]]
+      <p> Loop # [var k] [var v] </p>
+    [emptyloop]
+      <p> Empty Dict Content </p>
+    [endloop]
+
+  </body>
+</html>
